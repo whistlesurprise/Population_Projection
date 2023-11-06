@@ -63,11 +63,11 @@ model_fit = model.fit() # fits data to model
 
 
 
-**model** -> imported ARIMA class initialized with **x_data** and **order**.
+**model** -> Imported ARIMA class initialized with **x_data** and **order**.
 
 
 
-**model_fit** -> fits data to the ARIMA model with respect to parameters specified in **order**. You can think of this as the method that trains the model.
+**model_fit** -> Fits data to the ARIMA model with respect to parameters specified in **order**. You can think of this as the method that trains the model.
 
 
 
