@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
 
-import datetime as dt
-
 from statsmodels.tsa.arima.model import ARIMA
 
 class ARIMA_container():
@@ -13,9 +11,11 @@ class ARIMA_container():
         self.control_data = None
         self.training_data = None
         
-        self.pdq = (13,1,0)
+        self.pdq = order
         
-        self.predictions = order
+        self.predictions = None
+        
+        self.model = None
         
     def data_prep(self) -> None:
     
@@ -31,7 +31,7 @@ class ARIMA_container():
         
         self.training_data = training_data
         
-    def estimate(self, order: tuple=(13,1,0)) -> None:
+    def estimate(self) -> None:
         
         self.data_prep()
         
